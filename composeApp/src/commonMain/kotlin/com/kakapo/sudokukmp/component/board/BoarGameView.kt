@@ -1,4 +1,4 @@
-package com.kakapo.sudokukmp.board
+package com.kakapo.sudokukmp.component.board
 
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.layout.BoxWithConstraints
@@ -13,8 +13,8 @@ import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.drawscope.DrawScope
 import androidx.compose.ui.unit.dp
-import com.kakapo.sudokukmp.board.state.BoardGameState
-import com.kakapo.sudokukmp.board.state.rememberBoardGame
+import com.kakapo.sudokukmp.component.board.state.BoardGameState
+import com.kakapo.sudokukmp.component.board.state.rememberBoardGame
 import com.kakapo.sudokukmp.model.Cell
 
 @Composable
@@ -54,7 +54,12 @@ private fun DrawScope.drawBoardBackground(
     cellSize: Float,
     thinLineWidth: Float
 ) {
-    drawBoardFrame(thickLineColor, thickLineWidth, maxWidth)
+
+    drawBoardFrame(
+        thickLineColor = thickLineColor,
+        thickLineWidth = thickLineWidth,
+        maxWidth = maxWidth
+    )
 
     for (i in 1 until gameState.size) {
         val isThickLine = i % gameState.horThick == 0
