@@ -19,7 +19,11 @@ import androidx.compose.ui.unit.dp
 
 @Composable
 internal fun TopBoardView() {
-    Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
+    Row(
+        modifier = Modifier.fillMaxWidth(),
+        horizontalArrangement = Arrangement.SpaceBetween,
+        verticalAlignment = Alignment.CenterVertically
+    ) {
         DifficultyTextView()
         TimerTextView()
         PauseButton()
@@ -42,7 +46,7 @@ private fun TimerTextView() {
     Column(
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.spacedBy(4.dp)
-    ){
+    ) {
         Text(text = "Timer", style = MaterialTheme.typography.titleMedium)
         Text(text = "00:00", style = MaterialTheme.typography.bodyMedium)
     }
