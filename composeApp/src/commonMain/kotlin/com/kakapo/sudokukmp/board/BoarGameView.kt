@@ -18,29 +18,25 @@ import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.unit.dp
+import com.kakapo.sudokukmp.board.state.rememberBoardGame
 import com.kakapo.sudokukmp.model.Cell
-import kotlin.math.ceil
-import kotlin.math.floor
-import kotlin.math.sqrt
 
 @Composable
 fun BoardGameView(
-    size: Int = 81,
-    board: List<List<Cell>>,
-    enabled: Boolean = true
+    boards: List<List<Cell>>
 ) {
-    val vertThick by remember(size) { mutableIntStateOf(floor(sqrt(size.toFloat())).toInt()) }
-    val horThick by remember(size) { mutableIntStateOf(ceil(sqrt(size.toFloat())).toInt()) }
+    val gameState = rememberBoardGame(boards)
     val thickLineColor = MaterialTheme.colorScheme.primary
     val thinLineColor = MaterialTheme.colorScheme.error
-    val thinLineWidth = with(LocalDensity.current) { 1.3.dp.toPx() }
-    val thickLineWidth = with(LocalDensity.current) { 1.3.dp.toPx() }
+    val thickLineWidth = gameState.thickLineWidth
+    val thinLineWidth = gameState.thinLineWidth
+
     BoxWithConstraints(modifier = Modifier.fillMaxWidth().aspectRatio(1f).padding(4.dp)) {
         val maxWidth = constraints.maxWidth.toFloat()
-        val cellSize = maxWidth / size.toFloat()
+        val cellSize = maxWidth / gameState.size.toFloat()
         Canvas(modifier = Modifier.fillMaxSize()) {
-            for (i in 1 until size) {
-                val isThickLine = i % horThick == 0
+            for (i in 1 until gameState.size) {
+                val isThickLine = i % gameState.horThick == 0
                 drawLine(
                     color = if (isThickLine) thickLineColor else thinLineColor,
                     start = Offset(cellSize * i.toFloat(), 0f),
@@ -49,8 +45,8 @@ fun BoardGameView(
                 )
             }
 
-            for (i in 1 until size) {
-                val isThickLine = i % vertThick == 0
+            for (i in 1 until gameState.size) {
+                val isThickLine = i % gameState.verThick == 0
                 if (maxWidth >= cellSize * i) {
                     drawLine(
                         color = if (isThickLine) thickLineColor else thinLineColor,
