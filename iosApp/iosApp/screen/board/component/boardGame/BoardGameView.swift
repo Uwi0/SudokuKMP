@@ -41,18 +41,15 @@ struct BoardGameView: View {
                         lineWidth: lineWidth
                     )
                 }
-                
-                let rect = CGRect(x: 0, y: 0, width: maxWidth, height: maxWidth)
-                let cornerRadius: CGFloat = 15.0
-                let roundedRectPath = Path(roundedRect: rect, cornerRadius: cornerRadius)
-                                
-                context.stroke(roundedRectPath, with: .color(Color.blue), lineWidth: 2)
             }
             .aspectRatio(1, contentMode: .fill)
+            .clipShape(RoundedRectangle(cornerRadius: 20))
+            .overlay(RoundedRectangle(cornerRadius: 20).stroke(Color.blue, lineWidth: 3))
+            .frame(width: maxWidth, height: maxWidth)
         }
     }
 }
 
 #Preview {
-    BoardGameView().padding()
+    BoardGameView()
 }
