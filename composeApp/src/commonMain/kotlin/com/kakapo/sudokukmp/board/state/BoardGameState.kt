@@ -35,11 +35,11 @@ class BoardGameState(boards: List<List<Cell>>) {
 
     val thinLineWidth: Float
         @Composable get() {
-            return with(LocalDensity.current) { 1.3.dp.toPx() }
+            return with(LocalDensity.current) { 1.0.dp.toPx() }
         }
 
     val thickLineWidth: Float
         @Composable get() {
-            return with(LocalDensity.current) { 1.3.dp.toPx() }
+            return with(LocalDensity.current) { 2.dp.toPx() }
         }
 }

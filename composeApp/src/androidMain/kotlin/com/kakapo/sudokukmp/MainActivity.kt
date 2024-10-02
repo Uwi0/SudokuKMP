@@ -12,7 +12,7 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-
+            BoardGameView(boards = emptyList())
         }
     }
 }
@@ -21,6 +21,6 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun AppAndroidPreview() {
     Surface {
-        BoardGameView(size = 9, board = emptyList())
+        BoardGameView(boards = emptyList())
     }
 }
