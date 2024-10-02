@@ -27,6 +27,7 @@ struct BoardGameView: View {
                     )
                     
                 }
+                
                 for i in 1..<boardSize {
                     let isThickLine = i % horThic == 0
                     let lineColor = isThickLine ? Color.blue : Color.red

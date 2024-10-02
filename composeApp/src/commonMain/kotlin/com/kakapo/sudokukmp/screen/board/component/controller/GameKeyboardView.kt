@@ -1,10 +1,8 @@
 package com.kakapo.sudokukmp.screen.board.component.controller
 
 import androidx.compose.foundation.layout.Row
-import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
 import com.kakapo.sudokukmp.presentation.game.GameUiState
-import org.jetbrains.compose.ui.tooling.preview.Preview
 
 @Composable
 internal fun GameKeyboardView(uiState: GameUiState) {
@@ -19,10 +17,3 @@ internal fun GameKeyboardView(uiState: GameUiState) {
 }
 
 
-@Composable
-@Preview
-internal fun GameKeyboardViewPreview() {
-    Surface {
-        GameKeyboardView(uiState = GameUiState())
-    }
-}

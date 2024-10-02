@@ -15,22 +15,20 @@ import androidx.compose.ui.unit.dp
 @Composable
 internal fun RowScope.KeyboardItemView(number: Int, remainingUse: Int?) {
     val hasRemainingUse = remainingUse != null
-    Box(modifier = Modifier.weight(1f)) {
-        Column(
-            modifier = Modifier.padding(7.dp),
-            horizontalAlignment = Alignment.CenterHorizontally,
-            verticalArrangement = Arrangement.spacedBy(4.dp)
-        ) {
+    Column(
+        modifier = Modifier.weight(1f).padding(7.dp),
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.spacedBy(4.dp)
+    ) {
+        Text(
+            number.toString(16).uppercase(),
+            style = MaterialTheme.typography.titleLarge
+        )
+        if (hasRemainingUse) {
             Text(
-                number.toString(16).uppercase(),
-                style = MaterialTheme.typography.titleLarge
+                text = remainingUse.toString(),
+                style = MaterialTheme.typography.bodySmall
             )
-            if (hasRemainingUse) {
-                Text(
-                    text = remainingUse.toString(),
-                    style = MaterialTheme.typography.bodySmall
-                )
-            }
         }
     }
 }
