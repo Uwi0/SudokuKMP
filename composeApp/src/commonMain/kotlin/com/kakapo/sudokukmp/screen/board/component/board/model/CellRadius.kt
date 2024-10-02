@@ -1,4 +1,4 @@
-package com.kakapo.sudokukmp.component.board.model
+package com.kakapo.sudokukmp.screen.board.component.board.model
 
 import androidx.compose.ui.geometry.CornerRadius
 

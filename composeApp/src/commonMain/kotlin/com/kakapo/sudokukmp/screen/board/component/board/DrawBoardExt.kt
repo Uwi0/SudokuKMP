@@ -1,4 +1,4 @@
-package com.kakapo.sudokukmp.component.board
+package com.kakapo.sudokukmp.screen.board.component.board
 
 import androidx.compose.ui.geometry.CornerRadius
 import androidx.compose.ui.geometry.Offset

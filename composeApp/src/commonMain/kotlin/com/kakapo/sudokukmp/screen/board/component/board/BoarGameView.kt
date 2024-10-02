@@ -1,4 +1,4 @@
-package com.kakapo.sudokukmp.component.board
+package com.kakapo.sudokukmp.screen.board.component.board
 
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.layout.BoxWithConstraints
@@ -13,8 +13,8 @@ import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.drawscope.DrawScope
 import androidx.compose.ui.unit.dp
-import com.kakapo.sudokukmp.component.board.state.BoardGameState
-import com.kakapo.sudokukmp.component.board.state.rememberBoardGame
+import com.kakapo.sudokukmp.screen.board.component.board.state.BoardGameState
+import com.kakapo.sudokukmp.screen.board.component.board.state.rememberBoardGame
 import com.kakapo.sudokukmp.model.Cell
 
 @Composable

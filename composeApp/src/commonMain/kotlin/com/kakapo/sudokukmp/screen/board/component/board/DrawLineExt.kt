@@ -1,4 +1,4 @@
-package com.kakapo.sudokukmp.component.board
+package com.kakapo.sudokukmp.screen.board.component.board
 
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.geometry.Rect
@@ -6,7 +6,7 @@ import androidx.compose.ui.geometry.RoundRect
 import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.Path
 import androidx.compose.ui.graphics.drawscope.DrawScope
-import com.kakapo.sudokukmp.component.board.model.LinePosition
+import com.kakapo.sudokukmp.screen.board.component.board.model.LinePosition
 
 fun DrawScope.drawLinesPosition(position: LinePosition){
     drawVerticalLinePosition(position)

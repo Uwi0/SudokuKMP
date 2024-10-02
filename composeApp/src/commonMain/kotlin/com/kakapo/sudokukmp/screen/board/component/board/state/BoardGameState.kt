@@ -1,4 +1,4 @@
-package com.kakapo.sudokukmp.component.board.state
+package com.kakapo.sudokukmp.screen.board.component.board.state
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember

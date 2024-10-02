@@ -1,4 +1,4 @@
-package com.kakapo.sudokukmp.component.controller
+package com.kakapo.sudokukmp.screen.board.component.controller
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
