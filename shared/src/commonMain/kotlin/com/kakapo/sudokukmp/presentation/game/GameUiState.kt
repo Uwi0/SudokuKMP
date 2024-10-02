@@ -2,7 +2,8 @@ package com.kakapo.sudokukmp.presentation.game
 
 data class GameUiState(
     val size: Int = 0,
-    val remainingUse: List<Int>? = null
+    val remainingUse: List<Int>? = null,
+    val selectedNumber: Int = 0
 ) {
     val numbers: List<Int>
         get() {
@@ -11,7 +12,6 @@ data class GameUiState(
 
     val fontSize: Int get() {
         return if(remainingUse != null) 25 else 36
-
     }
 
     fun hideRemainingUse(number: Int): Boolean {
