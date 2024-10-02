@@ -1,4 +1,4 @@
-package com.kakapo.sudokukmp.component.control
+package com.kakapo.sudokukmp.component.controller
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box

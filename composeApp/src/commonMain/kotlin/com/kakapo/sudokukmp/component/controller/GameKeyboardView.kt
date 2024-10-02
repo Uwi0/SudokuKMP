@@ -1,4 +1,4 @@
-package com.kakapo.sudokukmp.component.control
+package com.kakapo.sudokukmp.component.controller
 
 import androidx.compose.foundation.layout.Row
 import androidx.compose.material3.Surface

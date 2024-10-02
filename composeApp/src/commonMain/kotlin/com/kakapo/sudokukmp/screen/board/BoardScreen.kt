@@ -8,7 +8,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.kakapo.sudokukmp.component.board.BoardGameView
-import com.kakapo.sudokukmp.component.control.GameKeyboardView
+import com.kakapo.sudokukmp.component.controller.GameControllerView
+import com.kakapo.sudokukmp.component.controller.GameKeyboardView
 import com.kakapo.sudokukmp.presentation.game.GameUiState
 
 @Composable
@@ -27,7 +28,7 @@ internal fun BoardScreen() {
             ) {
                 BoardGameView(boards = emptyList())
                 Spacer(Modifier.weight(1f))
-                GameKeyboardView(uiState = GameUiState(size = 9))
+                GameControllerView(uiState = GameUiState(size = 9))
             }
         }
     )

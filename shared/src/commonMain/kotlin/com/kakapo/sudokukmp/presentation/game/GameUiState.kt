@@ -19,3 +19,7 @@ data class GameUiState(
     }
 
 }
+
+enum class GameAction {
+    Erase, Hint, Note, Undo
+}
