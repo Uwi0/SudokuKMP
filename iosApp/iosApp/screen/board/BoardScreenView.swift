@@ -2,13 +2,28 @@ import SwiftUI
 
 struct BoardScreenView: View {
     var body: some View {
-        VStack(spacing: 24) {
-            TopContentView()
-            BoardGameView()
-            Spacer()
-            ControllerView()
+        NavigationView {
+            VStack(spacing: 24) {
+                TopContentView()
+                BoardGameView()
+                Spacer()
+                ControllerView()
+            }
+            .padding()
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .topBarLeading) {
+                    Button(action: {}) {
+                        Image(systemName: "arrow.left")
+                    }
+                }
+                ToolbarItem(placement: .topBarTrailing){
+                    Button(action: {}) {
+                        Image(systemName: "gearshape")
+                    }
+                }
+            }
         }
-        .padding()
     }
 }
 

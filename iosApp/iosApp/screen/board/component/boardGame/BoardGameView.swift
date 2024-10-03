@@ -5,6 +5,8 @@ struct BoardGameView: View {
     let horThic: Int = 3
     let verThic: Int = 3
     
+    private let cornerRadius: CGFloat = 5
+    
     var body: some View {
         GeometryReader { geometry in
             let maxWidth = geometry.size.width
@@ -44,8 +46,8 @@ struct BoardGameView: View {
                 }
             }
             .aspectRatio(1, contentMode: .fill)
-            .clipShape(RoundedRectangle(cornerRadius: 20))
-            .overlay(RoundedRectangle(cornerRadius: 20).stroke(Color.blue, lineWidth: 3))
+            .clipShape(RoundedRectangle(cornerRadius: cornerRadius))
+            .overlay(RoundedRectangle(cornerRadius: cornerRadius).stroke(Color.blue, lineWidth: 3))
             .frame(width: maxWidth, height: maxWidth)
         }
     }

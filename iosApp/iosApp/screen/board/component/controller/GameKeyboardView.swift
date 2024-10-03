@@ -7,7 +7,7 @@ struct GameKeyboardView: View {
     var body: some View {
         HStack {
             ForEach(numbers, id: \.self) { number in
-                KeyboardItemView(number: number, remainingUse: 4)
+                KeyboardItemView(number: number, remainingUse: nil)
             }
         }
     }
