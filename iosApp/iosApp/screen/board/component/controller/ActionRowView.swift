@@ -8,7 +8,6 @@ struct ActionRowView: View {
                 ActionButtonView(action: action, onClick: {})
             }
         }
-        .padding(16)
     }
 }
 
