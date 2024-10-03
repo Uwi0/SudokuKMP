@@ -2,7 +2,8 @@ import SwiftUI
 
 struct BoardScreenView: View {
     var body: some View {
-        VStack {
+        VStack(spacing: 24) {
+            TopContentView()
             BoardGameView()
             Spacer()
             ControllerView()
