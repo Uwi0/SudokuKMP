@@ -9,12 +9,15 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.kakapo.sudokukmp.screen.board.component.board.BoardGameView
 import com.kakapo.sudokukmp.screen.board.BoardRoute
 import com.kakapo.sudokukmp.screen.board.BoardScreen
+import com.kakapo.sudokukmp.ui.AppTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            BoardRoute()
+            AppTheme {
+                BoardRoute()
+            }
         }
     }
 }
