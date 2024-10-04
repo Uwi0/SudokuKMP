@@ -18,8 +18,8 @@ struct ActionButtonView: View {
                 .font(.subheadline)
                 .padding()
                 .frame(maxWidth: .infinity)
-                .background(.blue)
-                .foregroundColor(.white)
+                .background(primary)
+                .foregroundColor(onPrimary)
                 .cornerRadius(10)
             }
         )

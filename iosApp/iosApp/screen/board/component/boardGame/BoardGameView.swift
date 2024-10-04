@@ -16,7 +16,7 @@ struct BoardGameView: View {
                 
                 for i in 1..<boardSize {
                     let isThickLine = i % horThic == 0
-                    let lineColor = isThickLine ? Color.blue : Color.red
+                    let lineColor = isThickLine ? primary : error
                     let lineWidth: CGFloat = isThickLine ? 2 : 1
                     
                     context.stroke(
@@ -32,7 +32,7 @@ struct BoardGameView: View {
                 
                 for i in 1..<boardSize {
                     let isThickLine = i % horThic == 0
-                    let lineColor = isThickLine ? Color.blue : Color.red
+                    let lineColor = isThickLine ? primary : error
                     let lineWidth: CGFloat = isThickLine ? 2 : 1
                     
                     context.stroke(
@@ -47,7 +47,7 @@ struct BoardGameView: View {
             }
             .aspectRatio(1, contentMode: .fill)
             .clipShape(RoundedRectangle(cornerRadius: cornerRadius))
-            .overlay(RoundedRectangle(cornerRadius: cornerRadius).stroke(Color.blue, lineWidth: 3))
+            .overlay(RoundedRectangle(cornerRadius: cornerRadius).stroke(primary, lineWidth: 3))
             .frame(width: maxWidth, height: maxWidth)
         }
     }

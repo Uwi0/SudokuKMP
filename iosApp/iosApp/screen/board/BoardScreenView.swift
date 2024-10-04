@@ -15,11 +15,13 @@ struct BoardScreenView: View {
                 ToolbarItem(placement: .topBarLeading) {
                     Button(action: {}) {
                         Image(systemName: "arrow.left")
+                            .foregroundStyle(onSurface)
                     }
                 }
                 ToolbarItem(placement: .topBarTrailing){
                     Button(action: {}) {
                         Image(systemName: "gearshape")
+                            .foregroundStyle(onSurface)
                     }
                 }
             }
